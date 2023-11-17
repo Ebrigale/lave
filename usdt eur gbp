@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class CurrencyConverter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите сумму для конвертации: ");
+        double amount = scanner.nextDouble();
+
+        System.out.print("Выберите валюту для конвертации (USD, EUR, GBP): ");
+        String sourceCurrency = scanner.next().toUpperCase();
+
+        System.out.print("Выберите целевую валюту (USD, EUR, GBP): ");
+        String targetCurrency = scanner.next().toUpperCase();
+
+        double result = convertCurrency(amount, sourceCurrency, targetCurrency);
+        System.out.println("Результат конвертации: " + result + " " + targetCurrency);
+
+        scanner.close();
+    }
+
+    private static double convertCurrency(double amount, String sourceCurrency, String targetCurrency) {
+        // Здесь следует использовать реальные обменные курсы из внешнего источника
+        double usdToEurRate = 0.85;
+        double usdToGbpRate = 0.75;
+
+        double eurToUsdRate = 1.18;
+        double eurToGbpRate = 0.88;
+
+        double gbpToUsdRate = 1.34;
+        double gbpToEurRate = 1.13;
+
+        double result;
+
+        if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
+            result = amount * usdToEurRate;
+        } else if (sourceCurrency.equals("USD") && targetCurrency.equals("GBP")) {
+            result = amount * usdToGbpRate;
+        } else if (sourceCurrency.equals("EUR") && targetCurrency.equals("USD")) {
+            result = amount * eurToUsdRate;
+        } else if (sourceCurrency.equals("EUR") && targetCurrency.equals("GBP")) {
+            result = amount * eurToGbpRate;
+        } else if (sourceCurrency.equals("GBP") && targetCurrency.equals("USD")) {
+            result = amount * gbpToUsdRate;
+        } else if (sourceCurrency.equals("GBP") && targetCurrency.equals("EUR")) {
+            result = amount * gbpToEurRate;
+        } else {
+            // Если введены некорректные валюты
+            System.out.println("Ошибка: Неподдерживаемая валюта.");
+            result = 0;
+        }
+
+        return result;
+    }
+}
