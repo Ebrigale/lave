@@ -34,17 +34,7 @@ public class CurrencyConverter {
         double result;
 
         if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
-            result = amount * usdToEurRate;
-        } else if (sourceCurrency.equals("USD") && targetCurrency.equals("GBP")) {
-            result = amount * usdToGbpRate;
-        } else if (sourceCurrency.equals("EUR") && targetCurrency.equals("USD")) {
-            result = amount * eurToUsdRate;
-        } else if (sourceCurrency.equals("EUR") && targetCurrency.equals("GBP")) {
-            result = amount * eurToGbpRate;
-        } else if (sourceCurrency.equals("GBP") && targetCurrency.equals("USD")) {
-            result = amount * gbpToUsdRate;
-        } else if (sourceCurrency.equals("GBP") && targetCurrency.equals("EUR")) {
-            result = amount * gbpToEurRate;
+   
         } else {
             // Если введены некорректные валюты
             System.out.println("Ошибка: Неподдерживаемая валюта.");
