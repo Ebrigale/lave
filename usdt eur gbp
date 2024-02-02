@@ -43,4 +43,28 @@ public class CurrencyConverter {
 
         return result;
     }
+        double result;
+
+        if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
+   
+        } else {
+            // Если введены некорректные валюты
+            System.out.println("Ошибка: Неподдерживаемая валюта.");
+            result = 0;
+        }
+
+        return result;
+    }
+        double result;
+
+        if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
+   
+        } else {
+            // Если введены некорректные валюты
+            System.out.println("Ошибка: Неподдерживаемая валюта.");
+            result = 0;
+        }
+
+        return result;
+    }
 }
