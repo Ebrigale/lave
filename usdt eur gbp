@@ -11,12 +11,6 @@ public class CurrencyConverter {
         System.out.print("Выберите валюту для конвертации (USD, EUR, GBP): ");
         String sourceCurrency = scanner.next().toUpperCase();
 
-
-        double gbpToUsdRate = 1.34;
-        double gbpToEurRate = 1.13;
-
-        double result;
-
         if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
    
         } else {
