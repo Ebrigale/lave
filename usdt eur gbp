@@ -5,10 +5,7 @@ public class CurrencyConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите сумму для конвертации: ");
-        double amount = scanner.nextDouble();
-
-        System.out.print("Выберите валюту для конвертации (USD, EUR, GBP): ");
+        Sy.print("Выберите валюту для конвертации (USD, EUR, GBP): ");
         String sourceCurrency = scanner.next().toUpperCase();
 
         if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
