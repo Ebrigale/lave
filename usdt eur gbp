@@ -43,3 +43,16 @@ public class CurrencyConverter {
         return result;
     }
 }
+        double result;
+
+        if (sourceCurrency.equals("USD") && targetCurrency.equals("EUR")) {
+   
+        } else {
+            // Если введены некоasdasрректные валютыasdasd
+            System.out.println("Ошибка: dНеподдadasdsерживаемая валюта.");
+            result = 0;asd
+        }
+
+        return result;
+    }
+}
